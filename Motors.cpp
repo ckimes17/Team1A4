@@ -14,10 +14,10 @@ Library for motors
 /*---------------------------Module Variables--------------------------------*/
 
 char motorPins[MOTORS][PINS_PER_MOTOR] = {
-  {PIN_MLEFT_EN, PIN_MLEFT_A, PIN_MLEFT_B},
-  {PIN_MRIGHT_EN, PIN_MRIGHT_B, PIN_MRIGHT_A},
-  {PIN_MFRONT_EN, PIN_MFRONT_B, PIN_MFRONT_A},
-  {PIN_MBACK_EN, PIN_MBACK_B, PIN_MBACK_A}
+  {PIN_MFLEFT_EN, PIN_MFLEFT_A, PIN_MFLEFT_B},
+  {PIN_MFRIGHT_EN, PIN_MFRIGHT_B, PIN_MFRIGHT_A},
+  {PIN_MBLEFT_EN, PIN_MBLEFT_B, PIN_MBLEFT_A},
+  {PIN_MBRIGHT_EN, PIN_MBRIGHT_B, PIN_MBRIGHT_A}
 };
 
 char motorSpeeds[MOTORS];
