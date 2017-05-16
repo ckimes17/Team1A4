@@ -9,23 +9,22 @@
 /*---------------Module Defines-----------------------------*/
 
 // Pinout
-#define PIN_POT 3           	// Input pin for potentiometer
 
-#define PIN_MBACK_EN 11    	// Output pin for H Bridge
-#define PIN_MBACK_A 13			// One side of drive
-#define PIN_MBACK_B 12			// Other side of drive
+#define PIN_MFLEFT_EN 11    	// Output pin for H Bridge
+#define PIN_MFLEFT_A 13			// One side of drive
+#define PIN_MFLEFT_B 12			// Other side of drive
 
-#define PIN_MRIGHT_EN 10
-#define PIN_MRIGHT_A 9
-#define PIN_MRIGHT_B 8
+#define PIN_MFRIGHT_EN 10
+#define PIN_MFRIGHT_A 9
+#define PIN_MFRIGHT_B 8
 
-#define PIN_MFRONT_EN 5
-#define PIN_MFRONT_A 7
-#define PIN_MFRONT_B 6
+#define PIN_MBLEFT_EN 5
+#define PIN_MBLEFT_A 7
+#define PIN_MBLEFT_B 6
 
-#define PIN_MLEFT_EN 3
-#define PIN_MLEFT_A 2
-#define PIN_MLEFT_B 4
+#define PIN_MBRIGHT_EN 3
+#define PIN_MBRIGHT_A 2
+#define PIN_MBRIGHT_B 4
 
 // Constants
 #define MOTORS 4
