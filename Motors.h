@@ -10,21 +10,21 @@
 
 // Pinout
 
-#define PIN_MFLEFT_EN 11    	// Output pin for H Bridge
-#define PIN_MFLEFT_A 13			// One side of drive
-#define PIN_MFLEFT_B 12			// Other side of drive
+#define PIN_MFLEFT_EN 2    	// Output pin for H Bridge
+#define PIN_MFLEFT_A 47			// One side of drive
+#define PIN_MFLEFT_B 49			// Other side of drive
 
-#define PIN_MFRIGHT_EN 10
-#define PIN_MFRIGHT_A 9
-#define PIN_MFRIGHT_B 8
+#define PIN_MFRIGHT_EN 13
+#define PIN_MFRIGHT_A 51
+#define PIN_MFRIGHT_B 53
 
-#define PIN_MBLEFT_EN 5
-#define PIN_MBLEFT_A 7
-#define PIN_MBLEFT_B 6
+#define PIN_MBLEFT_EN 4
+#define PIN_MBLEFT_A 46
+#define PIN_MBLEFT_B 48
 
-#define PIN_MBRIGHT_EN 3
-#define PIN_MBRIGHT_A 2
-#define PIN_MBRIGHT_B 4
+#define PIN_MBRIGHT_EN 5
+#define PIN_MBRIGHT_A 50
+#define PIN_MBRIGHT_B 52
 
 // Constants
 #define MOTORS 4
@@ -37,10 +37,10 @@
 
 // Motor Reference
 enum motorID {
-  MLEFT,
-  MRIGHT,
-  MFRONT,
-  MBACK
+  MFLEFT,
+  MFRIGHT,
+  MBLEFT,
+  MBRIGHT
 };
 
 void applyMotorSettings(void);
