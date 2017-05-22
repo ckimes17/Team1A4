@@ -67,65 +67,81 @@ void setMotorSpeed(int motor, char val) {
 void moveLeft(char val) {
   char speedVal = constrain(val, -127, 127);
   if(braking) {
-    motorSpeedsQueue[MFRONT] = -speedVal;
-    motorSpeedsQueue[MBACK] = -speedVal;
+    motorSpeedsQueue[MFLEFT] = -speedVal;
+    motorSpeedsQueue[MFRIGHT] = speedVal;
+    motorSpeedsQueue[MBLEFT] = speedVal;
+    motorSpeedsQueue[MBRIGHT] = -speedVal;
     queued = true;
   } else {
-    motorSpeeds[MFRONT] = -speedVal;
-    motorSpeeds[MBACK] = -speedVal;
+    motorSpeeds[MFLEFT] = -speedVal;
+    motorSpeeds[MFRIGHT] = speedVal;
+    motorSpeeds[MBLEFT] = speedVal;
+    motorSpeeds[MBRIGHT] = -speedVal;
   } 
 }
 
 void moveRight(char val) {
   char speedVal = constrain(val, -127, 127);
   if(braking) {
-    motorSpeedsQueue[MFRONT] = speedVal;
-    motorSpeedsQueue[MBACK] = speedVal;
+    motorSpeedsQueue[MFLEFT] = speedVal;
+    motorSpeedsQueue[MFRIGHT] = -speedVal;
+    motorSpeedsQueue[MBLEFT] = -speedVal;
+    motorSpeedsQueue[MBRIGHT] = speedVal;
     queued = true;
   } else {
-    motorSpeeds[MFRONT] = speedVal;
-    motorSpeeds[MBACK] = speedVal;
+    motorSpeeds[MFLEFT] = speedVal;
+    motorSpeeds[MFRIGHT] = -speedVal;
+    motorSpeeds[MBLEFT] = -speedVal;
+    motorSpeeds[MBRIGHT] = speedVal;
   }
 }
 
 void moveBack(char val) {
   char speedVal = constrain(val, -127, 127);
   if(braking) { 
-    motorSpeedsQueue[MLEFT] = -speedVal;
-    motorSpeedsQueue[MRIGHT] = -speedVal;
+    motorSpeedsQueue[MFLEFT] = -speedVal;
+    motorSpeedsQueue[MFRIGHT] = -speedVal;
+    motorSpeedsQueue[MBLEFT] = -speedVal;
+    motorSpeedsQueue[MBRIGHT] = -speedVal;
     queued = true;
   } else { 
-    motorSpeeds[MLEFT] = -speedVal;
-    motorSpeeds[MRIGHT] = -speedVal;
+    motorSpeeds[MFLEFT] = -speedVal;
+    motorSpeeds[MFRIGHT] = -speedVal;
+    motorSpeeds[MBLEFT] = -speedVal;
+    motorSpeeds[MBRIGHT] = -speedVal;
   }
 }
 
 void moveForward(char val) {
   char speedVal = constrain(val, -127, 127);
   if(braking) {
-    motorSpeedsQueue[MLEFT] = speedVal;
-    motorSpeedsQueue[MRIGHT] = speedVal;
+    motorSpeedsQueue[MFLEFT] = speedVal;
+    motorSpeedsQueue[MFRIGHT] = speedVal;
+    motorSpeedsQueue[MBLEFT] = speedVal;
+    motorSpeedsQueue[MBRIGHT] = speedVal;
     queued = true;
   } else {
-    motorSpeeds[MLEFT] = speedVal;
-    motorSpeeds[MRIGHT] = speedVal;
+    motorSpeeds[MFLEFT] = speedVal;
+    motorSpeeds[MFRIGHT] = speedVal;
+    motorSpeeds[MBLEFT] = speedVal;
+    motorSpeeds[MBRIGHT] = speedVal;
   }
 }
 
 void turnCW(char val) {
   char speedVal = constrain(val, -127, 127);
-  motorSpeeds[MLEFT] = speedVal;
-  motorSpeeds[MFRONT] = speedVal;
-  motorSpeeds[MRIGHT] = -speedVal;
-  motorSpeeds[MBACK] = -speedVal;
+  motorSpeeds[MFLEFT] = speedVal;
+  motorSpeeds[MBLEFT] = speedVal;
+  motorSpeeds[MFRIGHT] = -speedVal;
+  motorSpeeds[MBRIGHT] = -speedVal;
 }
 
 void turnCCW(char val) {
   char speedVal = constrain(val, -127, 127);
-  motorSpeeds[MLEFT] = -speedVal;
-  motorSpeeds[MFRONT] = -speedVal;
-  motorSpeeds[MRIGHT] = speedVal;
-  motorSpeeds[MBACK] = speedVal;
+  motorSpeeds[MFLEFT] = -speedVal;
+  motorSpeeds[MBLEFT] = -speedVal;
+  motorSpeeds[MFRIGHT] = speedVal;
+  motorSpeeds[MBRIGHT] = speedVal;
 }
 
 void stopDriveMotors(void) {
